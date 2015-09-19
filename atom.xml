@@ -5,7 +5,7 @@
   <subtitle><![CDATA[New Start]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.alias4bb.com//"/>
-  <updated>2015-09-15T01:11:33.059Z</updated>
+  <updated>2015-09-19T15:27:51.144Z</updated>
   <id>http://www.alias4bb.com//</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[华为面试]]></title>
+    <link href="http://www.alias4bb.com/2015/09/17/huawei/"/>
+    <id>http://www.alias4bb.com/2015/09/17/huawei/</id>
+    <published>2015-09-17T02:35:21.000Z</published>
+    <updated>2015-09-19T15:27:51.144Z</updated>
+    <content type="html"><![CDATA[<h2 id="笔试">笔试</h2><p>华为招聘技术岗的一般是两个流程吧，先参加他们的技术岗测试再进行面试，那天下午接到去宋健机房参加笔试，刚去的话有点担心，对算法方面的很没把握，我就机智的上知乎查了查华为招聘流程= =，基本是上机测试答对一道就可以去面试咯，于是我也就只做了一道（关于取余的很简单），其余的两道题目全是和字符串处理相关的，而且只有C/C++/JAVA（用的是华为自己的OJ平台），上机测试之后还有个性格测试，别瞎猜出题人意图，否则你会让自己陷入不好的情况（比如后面面试的时候面试官会质问你前后怎么不一致~）.</p>
+<h2 id="面试">面试</h2><p>由于面试是上午左右，我早上有点私事，没按时赶过去，而且没带简历，还好华为有你网上填的简历，之后去晚了，在那等了半个小时吧，个人感觉华为要的是那种学习成绩特别好的人，很看重奖励和证书，面试官问我的全是学习成绩和项目经历，技术面也并没问我特别技术的方面，觉得我学习成绩不够优秀，项目经历不够进入他的法眼，可能是我说的技术他并没怎么接触吧（web前端/web安全）之后说我不符合他的职位要求,就果断被拒。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="笔试">笔试</h2><p>华为招聘技术岗的一般是两个流程吧，先参加他们的技术岗测试再进行面试，那天下午接到去宋健机房参加笔试，刚去的话有点担心，对算法方面的很没把握，我就机智的上知乎查了查华为招聘流程= =，基本是上机测试答对一道就可以去面试咯，于是我也就只做了]]>
+    </summary>
+    
+      <category term="生活" scheme="http://www.alias4bb.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="日常" scheme="http://www.alias4bb.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[一些js小组件]]></title>

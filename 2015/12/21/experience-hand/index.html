@@ -33,7 +33,7 @@
 
     <link rel="alternate" href="/atom.xml" title="Alias&#39;s Blog" type="application/atom+xml">
     <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" media="screen" type="text/css">
 	
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
@@ -66,6 +66,7 @@
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.min.js"></script>
     <script src="/js/respond.min.js"></script>
+    <script src="/js/ua-parser.min.js"></script>
     <![endif]-->
 
 
@@ -155,7 +156,7 @@
             <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
             <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=110 src="http://music.163.com/outchain/player?type=0&id=42466264&auto=1&height=90"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=110 src="http://music.163.com/outchain/player?type=0&id=42466264&auto=0&height=90"></iframe>
     </div>
     
     <!-- ============================ END Off-canvas navigation =========================== -->
@@ -297,11 +298,114 @@ var duoshuoQuery = {short_name:"alias"};
 (function() {
 	var ds = document.createElement('script');
 	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.alias4bb.com/embed_v20151012.js';
+	ds.id = 'duoshuo-script';
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
 	ds.charset = 'UTF-8';
 	(document.getElementsByTagName('head')[0] 
 	 || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
+</script>
+<script type="text/javascript">
+        var duoshuo_user_ID = 12721873;
+        var duoshuo_admin_nickname = "博主";
+</script>
+<script type="text/javascript">
+typeof DUOSHUO !== 'undefined' ?
+  hookDUOSHUO_tp() :
+  ($('#duoshuo-script')[0].onload = hookDUOSHUO_tp);
+
+
+function hookDUOSHUO_tp() {
+  var _D_post = DUOSHUO.templates.post;
+
+  DUOSHUO.templates.post = function (e, t) {
+    var rs = _D_post(e, t);
+    var agent = e.post.agent;
+    var userId = e.post.author.user_id;
+    var admin = '';
+
+    if (userId && (userId == duoshuo_user_ID)) {
+      admin = '<span class="duoshuo-ua-admin">' + duoshuo_admin_nickname + '</span>';
+    }
+
+    if (agent && /^Mozilla/.test(agent)) {
+      rs = rs.replace(/<\/div><p>/, admin + getAgentInfo(agent) + '</div><p>');
+    }
+
+    return rs;
+  }
+}
+
+function getAgentInfo(string) {
+  $.ua.set(string);
+
+  var UNKNOWN = 'Unknown';
+  var sua = $.ua;
+  var seperator = isMobile() ? '<br><br>' : '<span class="duoshuo-ua-seperator"></span>';
+  var osName = sua.os.name || UNKNOWN;
+  var osVersion = sua.os.version  || UNKNOWN;
+  var browserName = sua.browser.name || UNKNOWN;
+  var browserVersion = sua.browser.version || UNKNOWN;
+  var iconMapping = {
+    os: {
+      android : 'android',
+      linux   : 'linux',
+      windows : 'windows',
+      ios     : 'apple',
+      'mac os': 'apple',
+      unknown : 'desktop'
+    },
+    browser: {
+      chrome : 'chrome',
+      'chromium': 'chrome',
+      firefox: 'firefox',
+      opera  : 'opera',
+      safari : 'safari',
+      ie     : 'internet-explorer',
+      unknown: 'globe'
+    }
+  };
+  var osIcon = iconMapping.os[osName.toLowerCase()];
+  var browserIcon =  iconMapping.browser[browserName.toLowerCase()];
+
+  return seperator +
+    '<span class="duoshuo-ua-platform duoshuo-ua-platform-' + osName.toLowerCase() + '">' +
+       '<i class="fa fa-' + osIcon + '"></i>' +
+       osName + ' ' + osVersion +
+    '</span>' + seperator +
+    '<span class="duoshuo-ua-browser duoshuo-ua-browser-' + browserName.toLowerCase() + '">' +
+      '<i class="fa fa-' + browserIcon + '"></i>' +
+      browserName + ' ' + browserVersion +
+    '</span>';
+
+  function isMobile() {
+    var userAgent = navigator.userAgent;
+
+    var isiPad = userAgent.match(/iPad/i) !== null;
+    var mobileUA = [
+      'iphone', 'android', 'phone', 'mobile',
+      'wap', 'netfront', 'x11', 'java', 'opera mobi',
+      'opera mini', 'ucweb', 'windows ce', 'symbian',
+      'symbianos', 'series', 'webos', 'sony',
+      'blackberry', 'dopod', 'nokia', 'samsung',
+      'palmsource', 'xda', 'pieplus', 'meizu',
+      'midp' ,'cldc' , 'motorola', 'foma',
+      'docomo', 'up.browser', 'up.link', 'blazer',
+      'helio', 'hosin', 'huawei', 'novarra',
+      'coolpad', 'webos', 'techfaith', 'palmsource',
+      'alcatel', 'amoi', 'ktouch', 'nexian',
+      'ericsson', 'philips', 'sagem', 'wellcom',
+      'bunjalloo', 'maui', 'smartphone', 'iemobile',
+      'spice', 'bird', 'zte-', 'longcos',
+      'pantech', 'gionee', 'portalmmm', 'jig browser',
+      'hiptop', 'benq', 'haier', '^lct',
+      '320x320', '240x320', '176x220'
+    ];
+    var pattern = new RegExp(mobileUA.join('|'), 'i');
+
+    return !isiPad && userAgent.match(pattern);
+  }
+}
 </script>
 </div>
     </div>
@@ -350,6 +454,7 @@ var duoshuoQuery = {short_name:"alias"};
 </footer>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
+<script src="/js/ua-parser.min.js"></script>
 <!-- ============================ END Footer =========================== -->
       <!-- Load our scripts -->
         

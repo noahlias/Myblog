@@ -5,7 +5,7 @@
   <subtitle><![CDATA[New Start]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.alias4bb.com//"/>
-  <updated>2015-09-19T15:27:51.144Z</updated>
+  <updated>2015-12-21T05:12:24.058Z</updated>
   <id>http://www.alias4bb.com//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[汉得实习]]></title>
+    <link href="http://www.alias4bb.com/2015/12/21/experience-hand/"/>
+    <id>http://www.alias4bb.com/2015/12/21/experience-hand/</id>
+    <published>2015-12-21T02:45:21.000Z</published>
+    <updated>2015-12-21T05:12:24.058Z</updated>
+    <content type="html"><![CDATA[<h1 id="汉得实习">汉得实习</h1><h2 id="汉得培训">汉得培训</h2><p>听班主任说到可以去汉得咨询公司试试工作机会，由于自己是做技术方面的，就面试了软件工程师然而结果并不像我想的那一样，会问我很多复杂的问题，面试很轻松就过了，去了才知道，技术大部分来的是普通院校(没有歧视技术能力)，只是和我预想的差的有点多，还好上海园区的工作环境还不错，有员工宿舍等，培训了一段时间后，感觉老师还不错，只不过做的不是我专长的web方向</p>
+<h2 id="技术">技术</h2><p>这里的培训技术可大致分四块吧:</p>
+<ul>
+<li>PL/SQL</li>
+<li>BIEE</li>
+<li>ESSBASE</li>
+<li>COGNOS</li>
+</ul>
+<h3 id="PL/SQL">PL/SQL</h3><p>这方面的技术我之前没怎么接触过,不过接触了感觉就是把sql这种查询语言变成了一种编译语言,有函数，有变量等,可能是写的比较少,语法方面还是不怎么熟练.不过学会了几个小技巧,至少学会了排Bug2333<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="comment">---STATEMATENT;</span></span><br><span class="line"><span class="keyword">Exception</span> <span class="keyword">when</span> others <span class="keyword">then</span></span><br><span class="line">DBMS_OUTPUT.PUT_LINE(DBMS_UTILITY.FORMAT_ERROR_BACKTRACE);</span>	<span class="comment">/*显示堆栈输出，可以用来查bug*/</span></span><br><span class="line"><span class="operator"><span class="keyword">END</span>;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="BIEE_And_Cognos">BIEE And Cognos</h4><p>在BIEE方面个人觉得还是ETL过程方面的问题,其他的从物理层到逻辑层再到视图层很类似于程序开发中的<code>MVC</code>观点,之后再展示过程中感觉它的图形报表展现还不如一些利用JS开发的组件展现的报表如<a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts.js</a>或者<a href="http://www.chartjs.org/" target="_blank" rel="external">Chart.js</a>,在BIEE中有一个有意思的工具BiPbulisher(可以自己搭建模板)其他的感觉就比较死板了,没什么创新。<br>然而在Cognos里面看到了HTML项目，这是个可以改变外观的神器，暂时自己没看到如何去调动数据，不过以后在工作中我感觉这是个可以让数据最好的呈现给用户的工具。</p>
+<h3 id="感受">感受</h3><p>学会了一些新的linux命令，也是之前自己用的少的原因，学会了一些新的sql命令，不过还是局限于Oracle Sql语法,其他的感觉是这里学习的数据方面的概念和我大学讲的差不多,理解起来很简单.感觉以后学的关于数据方面的东西会更多啊。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="汉得实习">汉得实习</h1><h2 id="汉得培训">汉得培训</h2><p>听班主任说到可以去汉得咨询公司试试工作机会，由于自己是做技术方面的，就面试了软件工程师然而结果并不像我想的那一样，会问我很多复杂的问题，面试很轻松就过了，去了才知道，技术大部分来的是]]>
+    </summary>
+    
+      <category term="Hand" scheme="http://www.alias4bb.com/tags/Hand/"/>
+    
+      <category term="BI" scheme="http://www.alias4bb.com/categories/BI/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[华为面试]]></title>
